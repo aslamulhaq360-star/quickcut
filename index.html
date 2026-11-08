@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0284C7">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="QuickCut">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <title>QuickCut • আধুনিক ভিডিও এডিটর (Modern Video Editor)</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Immediate inline styling to guarantee a crisp light background on initial load */
+    html, body {
+      background-color: #F8FAFC;
+      color: #0F172A;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <!-- Immediate static fallback rendered before React hydration -->
+    <div class="app-container">
+      <header class="app-header">
+        <div class="logo-group">
+          <div class="logo-badge" title="QuickCut">
+            <svg viewBox="0 0 24 24" style="width: 26px; height: 26px; fill: #FFFFFF;">
+              <path d="M19 3L13 9l2 2 6-6V3h-2zm-8.8 8.8l-1.4-1.4L4.2 15A3 3 0 1 0 6 18c0-.7-.2-1.4-.6-2l3.4-3.4 1.4 1.4-3.4 3.4a3 3 0 1 0 1.8 1.8l3.4-3.4zM4.5 19.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-2.7-7.3l1.4-1.4 6 6v2h-2l-5.4-6.6z"/>
+            </svg>
+          </div>
+          <div class="title-wrap">
+            <h1>QuickCut</h1>
+            <div class="subtitle">
+              <span>আধুনিক ভিডিও এডিটর</span> • <span>Video Editor</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="upload-card">
+        <div class="upload-icon-ring">
+          <svg viewBox="0 0 24 24" style="width: 38px; height: 38px; fill: #0284C7;">
+            <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4zm2 14H4V8h16v10z"/>
+          </svg>
+        </div>
+        <div class="upload-text">
+          <h2>গ্যালারি থেকে ভিডিও নির্বাচন করুন / Select Video</h2>
+          <p>আপনার ডিভাইসের যেকোনো ভিডিও তাত্ক্ষণিক লোড হবে • Instantly loads local video</p>
+        </div>
+        <button type="button" class="gallery-btn-cta" onclick="document.querySelector('.hidden-file-input')?.click()">
+          <svg viewBox="0 0 24 24" style="width: 22px; height: 22px; fill: #FFFFFF;">
+            <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+          </svg>
+          <span>ভিডিও নির্বাচন করুন / Select Video</span>
+        </button>
+      </section>
+    </div>
+  </div>
+
+  <!-- Local Offline React 18 & ReactDOM 18 -->
+  <script src="vendor/react.min.js"></script>
+  <script src="vendor/react-dom.min.js"></script>
+  <!-- Main React App Script -->
+  <script src="app.js"></script>
+</body>
+</html>
